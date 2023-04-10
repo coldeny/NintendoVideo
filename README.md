@@ -1,1 +1,2 @@
 # NintendoVideo
+so um i used this to rebuild a file and it worked fine. i changed the thumbnail and it worked fine. but when i touched the video, it didnt work. so there is this "unknown2_idk" thing. hope someone finds what it really does. i feel like last 4 bytes of it is just padding... maybe it contains which box the file must go + something else or maybe its a 4 byte address. who knows? dani, not me. ok bye. 

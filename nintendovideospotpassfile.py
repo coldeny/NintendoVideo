@@ -132,7 +132,7 @@ nvsp = c.Struct(
 
 #So basically:
 def build(options:dict):
-    x = nvsp.build(data_dict)
+    x = nvsp.build(options)
     y = nvsp.parse(x)
 
     #Now we have to fix addresses.
@@ -142,9 +142,9 @@ def build(options:dict):
     options["hdr"]["mv_end_addr"] = y.mv.pos_mv_end
 
     for i, ilink in enumerate(y.ilinks):
-        data_dict["hdr"]["ilink_start_addrs"][i] = ilink.pos_ilink_start
+        options["hdr"]["ilink_start_addrs"][i] = ilink.pos_ilink_start
 
-    x = nvsp.build(data_dict) #final. fixed.
+    x = nvsp.build(options) #final. fixed.
     return x
 
 def parse(data):
